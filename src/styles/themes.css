@@ -1,0 +1,174 @@
+/* CSS Custom Properties for Theme System */
+
+/* Default (Dark) Theme */
+:root {
+  /* Background Colors */
+  --bg-primary: #121212;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #1e1e1e;
+  --bg-card: #1e1e1e;
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --bg-active: rgba(255, 255, 255, 0.1);
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-tertiary: #999999;
+  --text-muted: #666666;
+  
+  /* Border Colors */
+  --border-color: #333333;
+  --border-light: #404040;
+  --border-hover: #555555;
+  
+  /* Accent Colors */
+  --accent-color: #ff6b35;
+  --accent-hover: #e55a2b;
+  --accent-light: rgba(255, 107, 53, 0.1);
+  --accent-border: rgba(255, 107, 53, 0.3);
+  
+  /* Status Colors */
+  --success-color: #1db954;
+  --success-light: rgba(29, 185, 84, 0.1);
+  --warning-color: #ffa726;
+  --warning-light: rgba(255, 167, 38, 0.1);
+  --error-color: #f44336;
+  --error-light: rgba(244, 67, 54, 0.1);
+  --info-color: #2196f3;
+  --info-light: rgba(33, 150, 243, 0.1);
+  
+  /* Component Specific */
+  --header-bg: #121212;
+  --sidebar-bg: #121212;
+  --player-bg: #121212;
+  --modal-bg: #1e1e1e;
+  --modal-overlay: rgba(0, 0, 0, 0.8);
+  
+  /* Form Elements */
+  --input-bg: #1e1e1e;
+  --input-border: #333333;
+  --input-focus: #ff6b35;
+  --input-placeholder: #666666;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4);
+  
+  /* Switch/Toggle specific */
+  --switch-bg: #333333;
+  --switch-thumb: #ffffff;
+  --switch-icon-color: #999999;
+  
+  /* Scrollbar */
+  --scrollbar-track: #1e1e1e;
+  --scrollbar-thumb: #333333;
+  --scrollbar-thumb-hover: #555555;
+}
+
+/* Light Theme */
+:root.theme-light {
+  /* Background Colors */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #fefefe;
+  --bg-card: #fefefe;
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --bg-active: rgba(0, 0, 0, 0.08);
+  
+  /* Text Colors */
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-tertiary: #6c757d;
+  --text-muted: #adb5bd;
+  
+  /* Border Colors */
+  --border-color: #e9ecef;
+  --border-light: #f1f3f4;
+  --border-hover: #dee2e6;
+  
+  /* Accent Colors (keep consistent) */
+  --accent-color: #ff6b35;
+  --accent-hover: #e55a2b;
+  --accent-light: rgba(255, 107, 53, 0.08);
+  --accent-border: rgba(255, 107, 53, 0.2);
+  
+  /* Status Colors */
+  --success-color: #198754;
+  --success-light: rgba(25, 135, 84, 0.08);
+  --warning-color: #fd7e14;
+  --warning-light: rgba(253, 126, 20, 0.08);
+  --error-color: #dc3545;
+  --error-light: rgba(220, 53, 69, 0.08);
+  --info-color: #0d6efd;
+  --info-light: rgba(13, 110, 253, 0.08);
+  
+  /* Component Specific */
+  --header-bg: #ffffff;
+  --sidebar-bg: #f8f9fa;
+  --player-bg: #ffffff;
+  --modal-bg: #ffffff;
+  --modal-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* Form Elements */
+  --input-bg: #ffffff;
+  --input-border: #e9ecef;
+  --input-focus: #ff6b35;
+  --input-placeholder: #adb5bd;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* Switch/Toggle specific */
+  --switch-bg: #e9ecef;
+  --switch-thumb: #ffffff;
+  --switch-icon-color: #6c757d;
+  
+  /* Scrollbar */
+  --scrollbar-track: #f1f3f4;
+  --scrollbar-thumb: #c1c8cd;
+  --scrollbar-thumb-hover: #adb5bd;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+/* Disable transitions during theme change to prevent flash */
+.theme-transitioning * {
+  transition: none !important;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
